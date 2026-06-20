@@ -1,272 +1,364 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schedule · Fall Quarter</title>
+<title>Fall Schedule — Week of 9/28</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap');
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #0f1117;
-    --surface: #1a1d27;
-    --border: #2a2d3a;
-    --text: #e8eaf0;
-    --muted: #6b7080;
-    --math: #4f8ef7;
-    --cs:   #34c98a;
-    --anth: #f7a14f;
-    --ee:   #b97ef7;
-    --math-bg: rgba(79,142,247,0.12);
-    --cs-bg:   rgba(52,201,138,0.12);
-    --anth-bg: rgba(247,161,79,0.12);
-    --ee-bg:   rgba(185,126,247,0.12);
+  :root{
+    --bg: #121319;
+    --panel: #1b1d26;
+    --panel-2: #20222d;
+    --line: #2c2f3b;
+    --text: #f1f1f4;
+    --muted: #8c8fa3;
+    --math: #b48cff;
+    --math-bg: rgba(180,140,255,0.13);
+    --writ: #ff9776;
+    --writ-bg: rgba(255,151,118,0.13);
+    --cs: #6ea8fe;
+    --cs-bg: rgba(110,168,254,0.13);
+    --ee: #4fd6a8;
+    --ee-bg: rgba(79,214,168,0.13);
   }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    padding: 32px 16px 48px;
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 15% 0%, rgba(110,168,254,0.06), transparent 45%),
+      radial-gradient(circle at 90% 10%, rgba(79,214,168,0.05), transparent 40%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    padding:48px 24px 80px;
   }
 
-  header {
-    text-align: center;
-    margin-bottom: 36px;
+  .wrap{max-width:1180px;margin:0 auto;}
+
+  header.page{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:34px;
+    flex-wrap:wrap;
   }
 
-  header h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--text);
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 10px;
   }
 
-  header p {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-top: 6px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(28px,4vw,40px);
+    margin:0;
+    letter-spacing:-0.01em;
   }
 
-  /* Legend */
-  .legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 28px;
+  .legend{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
   }
 
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 0.78rem;
-    color: var(--muted);
-    font-weight: 500;
-    letter-spacing: 0.04em;
+  .legend-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:.04em;
   }
 
-  .legend-dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
+  .swatch{width:10px;height:10px;border-radius:3px;}
+  .swatch.math{background:var(--math);}
+  .swatch.writ{background:var(--writ);}
+  .swatch.cs{background:var(--cs);}
+  .swatch.ee{background:var(--ee);}
+
+  /* ----- calendar shell ----- */
+  .cal{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,0.6);
   }
 
-  /* Table wrapper */
-  .table-wrap {
-    overflow-x: auto;
-    border-radius: 14px;
-    border: 1px solid var(--border);
+  .cal-head{
+    display:grid;
+    grid-template-columns:64px repeat(5,1fr);
+    border-bottom:1px solid var(--line);
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 640px;
-    background: var(--surface);
+  .cal-head .corner{
+    border-right:1px solid var(--line);
   }
 
-  thead th {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 14px 10px;
-    border-bottom: 1px solid var(--border);
-    text-align: center;
+  .day-head{
+    padding:16px 12px 14px;
+    text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .day-head:last-child{border-right:none;}
+
+  .day-head .dow{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    color:var(--text);
+  }
+  .day-head .date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:2px;
   }
 
-  thead th:first-child {
-    text-align: left;
-    padding-left: 18px;
-    width: 110px;
+  .day-head.empty .dow{color:var(--muted);}
+
+  /* ----- grid body ----- */
+  .cal-body{
+    display:grid;
+    grid-template-columns:64px repeat(5,1fr);
+    position:relative;
   }
 
-  tbody tr {
-    border-bottom: 1px solid var(--border);
+  .time-col{
+    border-right:1px solid var(--line);
+    position:relative;
+    height:900px; /* 600 min * 1.5px */
   }
 
-  tbody tr:last-child { border-bottom: none; }
-
-  td {
-    padding: 10px 8px;
-    text-align: center;
-    vertical-align: middle;
-    border-right: 1px solid var(--border);
+  .time-label{
+    position:absolute;
+    right:10px;
+    transform:translateY(-50%);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
   }
 
-  td:last-child { border-right: none; }
+  .day-col{
+    position:relative;
+    height:900px;
+    border-right:1px solid var(--line);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 89px,
+      var(--line) 89px,
+      var(--line) 90px
+    );
+  }
+  .day-col:last-child{border-right:none;}
 
-  .time-cell {
-    text-align: left;
-    padding-left: 18px;
-    font-size: 0.75rem;
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-    font-weight: 500;
+  .event{
+    position:absolute;
+    left:6px;
+    right:6px;
+    border-radius:9px;
+    padding:8px 10px 7px;
+    border-left:3px solid;
+    overflow:hidden;
   }
 
-  /* Course pill */
-  .pill {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 8px;
-    padding: 8px 11px;
-    width: 100%;
-    text-align: left;
-    gap: 2px;
+  .event.math{background:var(--math-bg); border-color:var(--math);}
+  .event.writ{background:var(--writ-bg); border-color:var(--writ);}
+  .event.cs{background:var(--cs-bg); border-color:var(--cs);}
+  .event.ee{background:var(--ee-bg); border-color:var(--ee);}
+
+  .event .top-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:6px;
+    margin-bottom:3px;
   }
 
-  .pill .course-code {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+  .event .code{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:12.5px;
+  }
+  .event.math .code{color:var(--math);}
+  .event.writ .code{color:var(--writ);}
+  .event.cs .code{color:var(--cs);}
+  .event.ee .code{color:var(--ee);}
+
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:2px 6px;
+    border-radius:5px;
+    white-space:nowrap;
+    flex-shrink:0;
+    background:rgba(255,255,255,0.08);
+    color:var(--muted);
   }
 
-  .pill .course-type {
-    font-size: 0.68rem;
-    opacity: 0.7;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+  .event .time{
+    font-size:11px;
+    color:var(--muted);
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .event .loc{
+    font-size:11px;
+    color:var(--muted);
+    margin-top:3px;
   }
 
-  .pill .course-loc {
-    font-size: 0.68rem;
-    opacity: 0.55;
-    margin-top: 1px;
+  footer{
+    margin-top:28px;
+    text-align:center;
+    color:var(--muted);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.04em;
   }
 
-  .math  { background: var(--math-bg); color: var(--math); border-left: 3px solid var(--math); }
-  .cs    { background: var(--cs-bg);   color: var(--cs);   border-left: 3px solid var(--cs); }
-  .anth  { background: var(--anth-bg); color: var(--anth); border-left: 3px solid var(--anth); }
-  .ee    { background: var(--ee-bg);   color: var(--ee);   border-left: 3px solid var(--ee); }
-
-  .empty { color: transparent; }
-
-  @media (max-width: 480px) {
-    header h1 { font-size: 1.4rem; }
-    .pill .course-code { font-size: 0.72rem; }
-    .pill .course-type, .pill .course-loc { font-size: 0.62rem; }
+  @media (max-width: 760px){
+    .cal-head, .cal-body{grid-template-columns:44px repeat(5,minmax(110px,1fr));}
+    .cal{overflow-x:auto;}
+    .wrap{overflow-x:auto;}
   }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<header>
-  <h1>Weekly Schedule</h1>
-  <p>Fall Quarter 2026</p>
-</header>
+  <header class="page">
+    <div>
+      <p class="eyebrow">Fall Quarter 2026 — Week of Sep 28 – Oct 2</p>
+      <h1>Course Schedule</h1>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><span class="swatch math"></span>MATH 009A</div>
+      <div class="legend-item"><span class="swatch writ"></span>WRIT 010</div>
+      <div class="legend-item"><span class="swatch cs"></span>CS 010A</div>
+      <div class="legend-item"><span class="swatch ee"></span>EE 010</div>
+    </div>
+  </header>
 
-<div class="legend">
-  <span class="legend-item"><span class="legend-dot" style="background:#4f8ef7"></span>MATH 009A</span>
-  <span class="legend-item"><span class="legend-dot" style="background:#34c98a"></span>CS 010A</span>
-  <span class="legend-item"><span class="legend-dot" style="background:#f7a14f"></span>ANTH 005</span>
-  <span class="legend-item"><span class="legend-dot" style="background:#b97ef7"></span>EE 010</span>
+  <div class="cal">
+    <div class="cal-head">
+      <div class="corner"></div>
+      <div class="day-head"><div class="dow">Mon</div><div class="date">9/28</div></div>
+      <div class="day-head"><div class="dow">Tue</div><div class="date">9/29</div></div>
+      <div class="day-head"><div class="dow">Wed</div><div class="date">9/30</div></div>
+      <div class="day-head empty"><div class="dow">Thu</div><div class="date">10/1</div></div>
+      <div class="day-head"><div class="dow">Fri</div><div class="date">10/2</div></div>
+    </div>
+
+    <div class="cal-body">
+      <div class="time-col" id="timeCol"></div>
+
+      <!-- MONDAY -->
+      <div class="day-col">
+        <div class="event math" style="top:180px; height:75px;">
+          <div class="top-row"><span class="code">MATH 009A-020</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">9:00 – 9:50am</div>
+          <div class="loc">UG Teaching Learning Facility 103</div>
+        </div>
+        <div class="event writ" style="top:270px; height:75px;">
+          <div class="top-row"><span class="code">WRIT 010-006</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">10:00 – 10:50am</div>
+          <div class="loc">UG Teaching Learning Facility 106</div>
+        </div>
+        <div class="event cs" style="top:630px; height:120px;">
+          <div class="top-row"><span class="code">CS 010A-001</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">2:00 – 3:20pm</div>
+          <div class="loc">Winston Chung Hall 138</div>
+        </div>
+      </div>
+
+      <!-- TUESDAY -->
+      <div class="day-col">
+        <div class="event cs" style="top:270px; height:165px;">
+          <div class="top-row"><span class="code">CS 010A-022</span><span class="tag lab">Laboratory</span></div>
+          <div class="time">10:00 – 11:50am</div>
+          <div class="loc">UG Teaching Learning Facility 204</div>
+        </div>
+        <div class="event math" style="top:630px; height:75px;">
+          <div class="top-row"><span class="code">MATH 009A-004</span><span class="tag discussion">Discussion</span></div>
+          <div class="time">2:00 – 2:50pm</div>
+          <div class="loc">Sproul Hall 2339</div>
+        </div>
+      </div>
+
+      <!-- WEDNESDAY -->
+      <div class="day-col">
+        <div class="event math" style="top:180px; height:75px;">
+          <div class="top-row"><span class="code">MATH 009A-020</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">9:00 – 9:50am</div>
+          <div class="loc">UG Teaching Learning Facility 103</div>
+        </div>
+        <div class="event writ" style="top:270px; height:75px;">
+          <div class="top-row"><span class="code">WRIT 010-006</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">10:00 – 10:50am</div>
+          <div class="loc">UG Teaching Learning Facility 106</div>
+        </div>
+        <div class="event cs" style="top:630px; height:120px;">
+          <div class="top-row"><span class="code">CS 010A-001</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">2:00 – 3:20pm</div>
+          <div class="loc">Winston Chung Hall 138</div>
+        </div>
+      </div>
+
+      <!-- THURSDAY (empty) -->
+      <div class="day-col"></div>
+
+      <!-- FRIDAY -->
+      <div class="day-col">
+        <div class="event math" style="top:180px; height:75px;">
+          <div class="top-row"><span class="code">MATH 009A-020</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">9:00 – 9:50am</div>
+          <div class="loc">UG Teaching Learning Facility 103</div>
+        </div>
+        <div class="event writ" style="top:270px; height:75px;">
+          <div class="top-row"><span class="code">WRIT 010-006</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">10:00 – 10:50am</div>
+          <div class="loc">UG Teaching Learning Facility 106</div>
+        </div>
+        <div class="event ee" style="top:720px; height:165px;">
+          <div class="top-row"><span class="code">EE 010-001</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">3:00 – 4:50pm</div>
+          <div class="loc">UG Teaching Learning Facility 103</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>10 courses meetings · 5 unique sections</footer>
 </div>
 
-<div class="table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>Time</th>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-        <td class="time-cell">9:00–9:50 AM</td>
-        <td><div class="pill math"><span class="course-code">MATH 009A</span><span class="course-type">Lecture</span><span class="course-loc">SSC</span></div></td>
-        <td></td>
-        <td><div class="pill math"><span class="course-code">MATH 009A</span><span class="course-type">Lecture</span><span class="course-loc">SSC</span></div></td>
-        <td></td>
-        <td><div class="pill math"><span class="course-code">MATH 009A</span><span class="course-type">Lecture</span><span class="course-loc">SSC</span></div></td>
-      </tr>
-
-      <tr>
-        <td class="time-cell">11:00–11:50 AM</td>
-        <td></td>
-        <td><div class="pill cs"><span class="course-code">CS 010A</span><span class="course-type">Lab</span><span class="course-loc">Teaching &amp; Learning Facility</span></div></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="time-cell">12:25–1:00 PM</td>
-        <td><div class="pill anth"><span class="course-code">ANTH 005</span><span class="course-type">Lecture</span><span class="course-loc">University Lecture Hall</span></div></td>
-        <td></td>
-        <td><div class="pill anth"><span class="course-code">ANTH 005</span><span class="course-type">Lecture</span><span class="course-loc">University Lecture Hall</span></div></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="time-cell">2:00–2:50 PM</td>
-        <td></td>
-        <td><div class="pill math"><span class="course-code">MATH 009A</span><span class="course-type">Discussion</span><span class="course-loc">Sproul Hall</span></div></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="time-cell">3:00–3:20 PM</td>
-        <td><div class="pill cs"><span class="course-code">CS 010A</span><span class="course-type">Lecture</span><span class="course-loc">Chung Hall</span></div></td>
-        <td></td>
-        <td><div class="pill cs"><span class="course-code">CS 010A</span><span class="course-type">Lecture</span><span class="course-loc">Chung Hall</span></div></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="time-cell">4:00–4:50 PM</td>
-        <td><div class="pill anth"><span class="course-code">ANTH 005</span><span class="course-type">Discussion</span><span class="course-loc">Gordon Watkins Hall</span></div></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><div class="pill ee"><span class="course-code">EE 010</span><span class="course-type">Lecture</span><span class="course-loc">Teaching &amp; Learning Facility</span></div></td>
-      </tr>
-
-    </tbody>
-  </table>
-</div>
-
+<script>
+  const start = 7; // 7am
+  const end = 17;  // 5pm
+  const col = document.getElementById('timeCol');
+  for(let h = start; h <= end; h++){
+    const label = document.createElement('div');
+    label.className = 'time-label';
+    const top = (h - start) * 90;
+    label.style.top = top + 'px';
+    const hour12 = h % 12 === 0 ? 12 : h % 12;
+    const suffix = h < 12 || h === 24 ? 'am' : 'pm';
+    label.textContent = hour12 + suffix;
+    col.appendChild(label);
+  }
+</script>
 </body>
 </html>
