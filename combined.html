@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fall 2026 — Training & Course Schedule</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#121319;
+    --panel:#1b1d26;
+    --panel-2:#20222d;
+    --line:#2c2f3b;
+    --text:#f1f1f4;
+    --muted:#8c8fa3;
+    --math:#b48cff;     --math-bg:rgba(180,140,255,0.13);
+    --writ:#ff9776;     --writ-bg:rgba(255,151,118,0.13);
+    --cs:#6ea8fe;        --cs-bg:rgba(110,168,254,0.13);
+    --ee:#4fd6a8;        --ee-bg:rgba(79,214,168,0.13);
+    --phys:#c4e15a;      --phys-bg:rgba(196,225,90,0.13);
+    --run:#ff6275;       --run-bg:rgba(255,98,117,0.14);
+    --gym:#f2c94c;       --gym-bg:rgba(242,201,76,0.16);
+    --study:#9aa5d4;     --study-bg:rgba(154,165,212,0.11);
+    --free:#5b6178;      --free-bg:rgba(91,97,120,0.10);
+    --shower:#5fc8e0;
+    --sleep:#5865a8;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 12% 0%, rgba(255,98,117,0.06), transparent 45%),
+      radial-gradient(circle at 92% 8%, rgba(79,214,168,0.05), transparent 40%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    padding:48px 24px 80px;
+  }
+  .wrap{max-width:1280px;margin:0 auto;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 10px;
+  }
+  h1{
+    font-family:'Space Grotesk', sans-serif; font-weight:700;
+    font-size:clamp(26px,3.6vw,38px); margin:0 0 10px; letter-spacing:-0.01em;
+  }
+  .sub{color:var(--muted); font-size:14.5px; max-width:700px; line-height:1.55; margin:0 0 30px;}
+
+  .macros{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:30px;}
+  .macro-chip{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:12px 18px; min-width:140px;}
+  .macro-chip .label{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);}
+  .macro-chip .val{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; margin-top:4px;}
+  .macro-chip.protein .val{color:var(--run);}
+  .macro-chip.carbs .val{color:var(--gym);}
+  .macro-chip.fats .val{color:var(--cs);}
+  .macro-chip.sleep .val{color:var(--sleep);}
+
+  .principles{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:40px;}
+  .principle{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px;}
+  .principle .num{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:.08em;}
+  .principle h3{font-family:'Space Grotesk',sans-serif; font-size:15px; margin:6px 0 6px; font-weight:600;}
+  .principle p{font-size:13px; color:var(--muted); line-height:1.5; margin:0;}
+
+  .legend{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;}
+  .legend-item{display:flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);}
+  .swatch{width:10px;height:10px;border-radius:3px;}
+  .swatch.run{background:var(--run);} .swatch.gym{background:var(--gym);}
+  .swatch.math{background:var(--math);} .swatch.writ{background:var(--writ);}
+  .swatch.cs{background:var(--cs);} .swatch.ee{background:var(--ee);}
+  .swatch.study{background:var(--study);} .swatch.free{background:var(--free);}
+  .swatch.phys{background:var(--phys);}
+  .swatch.meal{background:#5b5f70;} .swatch.shower{background:var(--shower);} .swatch.sleep{background:var(--sleep);}
+
+  .cal{background:var(--panel); border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(0,0,0,0.6); margin-bottom:46px;}
+  .cal-scroll{overflow-x:auto;}
+  .cal-head{display:grid; grid-template-columns:56px repeat(7,minmax(124px,1fr)); border-bottom:1px solid var(--line); min-width:980px;}
+  .corner{border-right:1px solid var(--line);}
+  .day-head{padding:14px 8px 12px; text-align:center; border-right:1px solid var(--line);}
+  .day-head:last-child{border-right:none;}
+  .day-head .dow{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;}
+  .day-head .tag-line{font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--muted); margin-top:4px; line-height:1.4;}
+
+  .cal-body{display:grid; grid-template-columns:56px repeat(7,minmax(124px,1fr)); position:relative; min-width:980px;}
+  .time-col{border-right:1px solid var(--line); position:relative; height:785px;}
+  .time-label{position:absolute; right:8px; transform:translateY(-50%); font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted);}
+  .day-col{position:relative; height:785px; border-right:1px solid var(--line);
+    background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 44px, var(--line) 44px, var(--line) 45px);}
+  .day-col:last-child{border-right:none;}
+
+  .event{position:absolute; left:4px; right:4px; border-radius:7px; padding:5px 7px 4px; border-left:3px solid; overflow:hidden;}
+  .event .code{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10px; line-height:1.2; display:block;}
+  .event .time{font-size:9px; color:var(--muted); font-family:'IBM Plex Mono',monospace; margin-top:1px; display:block;}
+
+  .event.run{background:var(--run-bg); border-color:var(--run);} .event.run .code{color:var(--run);}
+  .event.gym{background:var(--gym-bg); border-color:var(--gym);} .event.gym .code{color:var(--gym);}
+  .event.math{background:var(--math-bg); border-color:var(--math);} .event.math .code{color:var(--math);}
+  .event.writ{background:var(--writ-bg); border-color:var(--writ);} .event.writ .code{color:var(--writ);}
+  .event.cs{background:var(--cs-bg); border-color:var(--cs);} .event.cs .code{color:var(--cs);}
+  .event.ee{background:var(--ee-bg); border-color:var(--ee);} .event.ee .code{color:var(--ee);}
+  .event.phys{background:var(--phys-bg); border-color:var(--phys);} .event.phys .code{color:var(--phys);}
+  .event.study{background:var(--study-bg); border-color:var(--study);} .event.study .code{color:var(--study);}
+  .event.free{background:var(--free-bg); border-color:var(--free); border-left-style:dashed;} .event.free .code{color:#9ba0b8;}
+
+  .event.meal{background:rgba(255,255,255,0.045); border-left:3px solid #5b5f70; border-radius:5px; padding:2px 7px; display:flex; align-items:center; gap:5px;}
+  .event.meal .code{font-size:9px; color:#c7c9d4; font-weight:600;}
+
+  .event.shower{background:rgba(95,200,224,0.10); border-left:3px solid var(--shower); border-radius:5px; padding:2px 7px; display:flex; align-items:center; gap:5px;}
+  .event.shower .code{font-size:9px; color:var(--shower); font-weight:600;}
+
+  .event.sleep{background:rgba(88,101,168,0.16); border-left:3px solid var(--sleep); border-radius:5px; padding:2px 7px; display:flex; align-items:center; gap:5px;}
+  .event.sleep .code{font-size:9px; color:#aab0e0; font-weight:600;}
+
+  .detail-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:16px; flex-wrap:wrap; gap:8px;}
+  .detail-head h2{font-family:'Space Grotesk',sans-serif; font-size:22px; margin:0;}
+  .detail-head .hint{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);}
+
+  details.day{background:var(--panel); border:1px solid var(--line); border-radius:14px; margin-bottom:10px; overflow:hidden;}
+  details.day summary{list-style:none; cursor:pointer; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  details.day summary::-webkit-details-marker{display:none;}
+  .summary-left{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+  .day-name{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; min-width:54px;}
+  .summary-chips{display:flex; gap:6px; flex-wrap:wrap;}
+  .chip{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.03em; padding:4px 9px; border-radius:20px; border:1px solid var(--line); color:var(--muted);}
+  .chip.run{color:var(--run); border-color:rgba(255,98,117,0.35);}
+  .chip.gym{color:var(--gym); border-color:rgba(242,201,76,0.35);}
+  .chip.study{color:var(--study); border-color:rgba(154,165,212,0.4);}
+  .chevron{color:var(--muted); font-size:13px; transition:transform .2s ease;}
+  details.day[open] .chevron{transform:rotate(90deg);}
+
+  .day-content{padding:0 20px 22px;}
+  .agenda{border-top:1px solid var(--line); padding-top:16px;}
+  .agenda-row{display:grid; grid-template-columns:96px 1fr; gap:14px; padding:9px 0; border-bottom:1px solid var(--line);}
+  .agenda-row:last-child{border-bottom:none;}
+  .agenda-time{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--muted); padding-top:2px;}
+  .agenda-main .title{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;}
+  .agenda-main .title.run{color:var(--run);} .agenda-main .title.gym{color:var(--gym);}
+  .agenda-main .title.math{color:var(--math);} .agenda-main .title.writ{color:var(--writ);}
+  .agenda-main .title.cs{color:var(--cs);} .agenda-main .title.ee{color:var(--ee);}
+  .agenda-main .title.phys{color:var(--phys);}
+  .agenda-main .title.study{color:var(--study);} .agenda-main .title.shower{color:var(--shower);}
+  .agenda-main .title.sleep{color:#aab0e0;}
+  .agenda-main .sets{font-size:12.5px; color:var(--muted); line-height:1.65; margin-top:4px;}
+  .agenda-main .why{font-size:12px; color:#aeb2c4; background:var(--panel-2); border-radius:8px; padding:8px 10px; margin-top:8px; line-height:1.5;}
+  .agenda-main .why b{color:var(--text); font-weight:600;}
+
+  footer{margin-top:30px; text-align:center; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:11px;}
+
+  @media (max-width:760px){ .agenda-row{grid-template-columns:72px 1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Fall Quarter 2026</p>
+  <h1>Training &amp; Course Schedule</h1>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch run"></span>Run</div>
+    <div class="legend-item"><span class="swatch gym"></span>Gym</div>
+    <div class="legend-item"><span class="swatch math"></span>MATH</div>
+    <div class="legend-item"><span class="swatch writ"></span>WRIT</div>
+    <div class="legend-item"><span class="swatch cs"></span>CS</div>
+    <div class="legend-item"><span class="swatch ee"></span>EE</div>
+    <div class="legend-item"><span class="swatch phys"></span>PHYS</div>
+    <div class="legend-item"><span class="swatch study"></span>Study</div>
+    <div class="legend-item"><span class="swatch free"></span>Free</div>
+    <div class="legend-item"><span class="swatch meal"></span>Meal</div>
+    <div class="legend-item"><span class="swatch shower"></span>Shower</div>
+    <div class="legend-item"><span class="swatch sleep"></span>Sleep</div>
+  </div>
+
+  <div class="cal">
+    <div class="cal-scroll">
+    <div class="cal-head">
+      <div class="corner"></div>
+      <div class="day-head"><div class="dow">Mon</div><div class="tag-line">Workout Run<br>Push + Core</div></div>
+      <div class="day-head"><div class="dow">Tue</div><div class="tag-line">Easy Run<br>Pull</div></div>
+      <div class="day-head"><div class="dow">Wed</div><div class="tag-line">Workout Run<br>Legs + Core</div></div>
+      <div class="day-head"><div class="dow">Thu</div><div class="tag-line">Easy Run<br>Upper Volume (PM)</div></div>
+      <div class="day-head"><div class="dow">Fri</div><div class="tag-line">Easy Run<br>Full Body + Core</div></div>
+      <div class="day-head"><div class="dow">Sat</div><div class="tag-line">Long Run<br>Core</div></div>
+      <div class="day-head"><div class="dow">Sun</div><div class="tag-line">Rest<br>Rest</div></div>
+    </div>
+
+    <div class="cal-body">
+      <div class="time-col" id="timeCol"></div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event run" style="top:15.0px;height:37.5px;"><span class="code">Run — Workout</span><span class="time">6:20am–7:20am</span></div>
+        <div class="event meal" style="top:52.5px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event math" style="top:135.0px;height:37.5px;"><span class="code">MATH 020</span><span class="time">9am–9:50am</span></div>
+        <div class="event writ" style="top:180.0px;height:37.5px;"><span class="code">WRIT 006</span><span class="time">10am–10:50am</span></div>
+        <div class="event study" style="top:225.0px;height:45.0px;"><span class="code">Study</span><span class="time">11am–12pm</span></div>
+        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:315.0px;height:45.0px;"><span class="code">Study</span><span class="time">1pm–2pm</span></div>
+        <div class="event cs" style="top:360.0px;height:60.0px;"><span class="code">CS 010A-001</span><span class="time">2pm–3:20pm</span></div>
+        <div class="event gym" style="top:435.0px;height:67.5px;"><span class="code">Push + Core</span><span class="time">3:40pm–5:10pm</span></div>
+        <div class="event meal" style="top:502.5px;height:15.0px;"><span class="code">Shake</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:585.0px;height:90.0px;"><span class="code">Study</span><span class="time">7pm–9pm</span></div>
+        <div class="event free" style="top:675.0px;height:33.8px;"><span class="code">Free</span><span class="time">9pm–9:45pm</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:723.8px;height:18.8px;"><span class="code">Wind down</span><span class="time">10:05pm–10:30pm</span></div>
+        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
+        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event phys" style="top:90.0px;height:60.0px;"><span class="code">PHYS 040A-001</span><span class="time">8am–9:20am</span></div>
+        <div class="event study" style="top:150.0px;height:30.0px;"><span class="code">Study</span><span class="time">9:20am–10am</span></div>
+        <div class="event cs" style="top:180.0px;height:82.5px;"><span class="code">CS Lab</span><span class="time">10am–11:50am</span></div>
+        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:315.0px;height:45.0px;"><span class="code">Study</span><span class="time">1pm–2pm</span></div>
+        <div class="event math" style="top:360.0px;height:37.5px;"><span class="code">MATH Disc.</span><span class="time">2pm–2:50pm</span></div>
+        <div class="event study" style="top:405.0px;height:33.8px;"><span class="code">Study</span><span class="time">3pm–3:45pm</span></div>
+        <div class="event free" style="top:438.8px;height:22.5px;"><span class="code">Free</span><span class="time">3:45pm–4:15pm</span></div>
+        <div class="event gym" style="top:461.2px;height:67.5px;"><span class="code">Pull Strength</span><span class="time">4:15pm–5:45pm</span></div>
+        <div class="event meal" style="top:528.8px;height:14px;"><span class="code">Shake</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:585.0px;height:67.5px;"><span class="code">Study</span><span class="time">7pm–8:30pm</span></div>
+        <div class="event free" style="top:652.5px;height:45.0px;"><span class="code">Free</span><span class="time">8:30pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
+        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event run" style="top:15.0px;height:37.5px;"><span class="code">Run — Workout</span><span class="time">6:20am–7:10am</span></div>
+        <div class="event meal" style="top:52.5px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event math" style="top:135.0px;height:37.5px;"><span class="code">MATH 020</span><span class="time">9am–9:50am</span></div>
+        <div class="event writ" style="top:180.0px;height:37.5px;"><span class="code">WRIT 006</span><span class="time">10am–10:50am</span></div>
+        <div class="event study" style="top:225.0px;height:45.0px;"><span class="code">Study</span><span class="time">11am–12pm</span></div>
+        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:315.0px;height:45.0px;"><span class="code">Study</span><span class="time">1pm–2pm</span></div>
+        <div class="event cs" style="top:360.0px;height:60.0px;"><span class="code">CS 010A-001</span><span class="time">2pm–3:20pm</span></div>
+        <div class="event gym" style="top:435.0px;height:67.5px;"><span class="code">Legs + Core</span><span class="time">3:40pm–5:10pm</span></div>
+        <div class="event meal" style="top:502.5px;height:15.0px;"><span class="code">Shake</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:585.0px;height:90.0px;"><span class="code">Study</span><span class="time">7pm–9pm</span></div>
+        <div class="event free" style="top:675.0px;height:33.8px;"><span class="code">Free</span><span class="time">9pm–9:45pm</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:723.8px;height:18.8px;"><span class="code">Wind down</span><span class="time">10:05pm–10:30pm</span></div>
+        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
+        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event phys" style="top:90.0px;height:60.0px;"><span class="code">PHYS 040A-001</span><span class="time">8am–9:20am</span></div>
+        <div class="event study" style="top:150.0px;height:30.0px;"><span class="code">Study</span><span class="time">9:20am–10am</span></div>
+        <div class="event phys" style="top:180.0px;height:37.5px;"><span class="code">PHYS Disc.</span><span class="time">10am–10:50am</span></div>
+        <div class="event meal" style="top:225.0px;height:37.5px;"><span class="code">Lunch</span></div>
+        <div class="event phys" style="top:270.0px;height:127.5px;"><span class="code">PHYS Lab</span><span class="time">12pm–2:50pm</span></div>
+        <div class="event free" style="top:495.0px;height:45.0px;"><span class="code">Free</span><span class="time">3pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event gym" style="top:596.2px;height:67.5px;"><span class="code">Upper Volume</span><span class="time">7:15pm–8:45pm</span></div>
+        <div class="event meal" style="top:663.8px;height:14px;"><span class="code">Shake</span></div>
+        <div class="event free" style="top:675.0px;height:22.5px;"><span class="code">Free</span><span class="time">9pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
+        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
+        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event math" style="top:135.0px;height:37.5px;"><span class="code">MATH 020</span><span class="time">9am–9:50am</span></div>
+        <div class="event writ" style="top:180.0px;height:37.5px;"><span class="code">WRIT 006</span><span class="time">10am–10:50am</span></div>
+        <div class="event gym" style="top:225.0px;height:67.5px;"><span class="code">Full Body + Core</span><span class="time">11am–12:30pm</span></div>
+        <div class="event meal" style="top:292.5px;height:45.0px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:337.5px;height:90.0px;"><span class="code">Study</span><span class="time">1:30pm–2:50pm</span></div>
+        <div class="event ee" style="top:405.0px;height:82.5px;"><span class="code">EE 010-001</span><span class="time">3pm–4:50pm</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event free" style="top:585.0px;height:112.5px;"><span class="code">Free</span><span class="time">7pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
+        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Pre-run snack</span></div>
+        <div class="event run" style="top:56.2px;height:78.8px;"><span class="code">Run — Long Run</span><span class="time">7:15am–9am</span></div>
+        <div class="event meal" style="top:135.0px;height:15.0px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:150.0px;height:52.5px;"><span class="code">Free</span><span class="time">9:20am–10:30am</span></div>
+        <div class="event study" style="top:202.5px;height:67.5px;"><span class="code">Study</span><span class="time">10:30am–12pm</span></div>
+        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
+        <div class="event free" style="top:315.0px;height:112.5px;"><span class="code">Free</span><span class="time">1pm–3:30pm</span></div>
+        <div class="event gym" style="top:427.5px;height:22.5px;"><span class="code">Core</span><span class="time">3:30pm–4pm</span></div>
+        <div class="event free" style="top:450.0px;height:90.0px;"><span class="code">Free</span><span class="time">4pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event free" style="top:585.0px;height:112.5px;"><span class="code">Free</span><span class="time">7pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:52.5px;"><span class="code">Wind down</span><span class="time">9:50pm–11pm</span></div>
+        <div class="event sleep" style="top:765.0px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:90.0px;height:22.5px;"><span class="code">Breakfast</span></div>
+        <div class="event study" style="top:112.5px;height:135.0px;"><span class="code">Study</span><span class="time">8:30am–11:30am</span></div>
+        <div class="event free" style="top:247.5px;height:22.5px;"><span class="code">Free</span><span class="time">11:30am–12pm</span></div>
+        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:315.0px;height:90.0px;"><span class="code">Study</span><span class="time">1pm–3pm</span></div>
+        <div class="event free" style="top:405.0px;height:135.0px;"><span class="code">Free</span><span class="time">3pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:585.0px;height:67.5px;"><span class="code">Study</span><span class="time">7pm–8:30pm</span></div>
+        <div class="event free" style="top:652.5px;height:45.0px;"><span class="code">Free</span><span class="time">8:30pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:14px;"><span class="code">Wind down</span><span class="time">9:50pm–10pm</span></div>
+        <div class="event sleep" style="top:720.0px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <footer>7-day cycle · ~25 hrs/week study, heaviest Sun/Tue/Mon/Wed · macro targets are daily, not per-session</footer>
+</div>
+
+<script>
+  const startHour = 6, endHour = 23;
+  const col = document.getElementById('timeCol');
+  for(let h = startHour; h <= endHour; h++){
+    const label = document.createElement('div');
+    label.className = 'time-label';
+    const top = (h - startHour) * 45;
+    label.style.top = top + 'px';
+    const hour12 = h % 12 === 0 ? 12 : h % 12;
+    const suffix = h < 12 || h === 24 ? 'am' : 'pm';
+    label.textContent = hour12 + suffix;
+    col.appendChild(label);
+  }
+</script>
+</body>
+</html>
