@@ -20,8 +20,10 @@
     --writ-bg: rgba(255,151,118,0.13);
     --cs: #6ea8fe;
     --cs-bg: rgba(110,168,254,0.13);
-    --ee: #4fd6a8;
+    --ee: #c6e74d;
     --ee-bg: rgba(79,214,168,0.13);
+    --phys: #f5ea4f;
+    --phys-bg: rgba(241, 233, 121, 0.13);
   }
 
   *{box-sizing:border-box;}
@@ -86,6 +88,7 @@
   .swatch.writ{background:var(--writ);}
   .swatch.cs{background:var(--cs);}
   .swatch.ee{background:var(--ee);}
+  .swatch.phys{background:var(--phys);}
 
   /* ----- calendar shell ----- */
   .cal{
@@ -178,6 +181,7 @@
   .event.writ{background:var(--writ-bg); border-color:var(--writ);}
   .event.cs{background:var(--cs-bg); border-color:var(--cs);}
   .event.ee{background:var(--ee-bg); border-color:var(--ee);}
+  .event.phys{background:var(--phys-bg); border-color:var(--phys);}
 
   .event .top-row{
     display:flex;
@@ -196,6 +200,7 @@
   .event.writ .code{color:var(--writ);}
   .event.cs .code{color:var(--cs);}
   .event.ee .code{color:var(--ee);}
+  .event.phys .code{color:var(--phys);}
 
   .tag{
     font-family:'IBM Plex Mono', monospace;
@@ -250,17 +255,18 @@
       <div class="legend-item"><span class="swatch writ"></span>WRIT 010</div>
       <div class="legend-item"><span class="swatch cs"></span>CS 010A</div>
       <div class="legend-item"><span class="swatch ee"></span>EE 010</div>
+      <div class="legend-item"><span class="swarch phys"></span>PHYS 040A</div>
     </div>
   </header>
 
   <div class="cal">
     <div class="cal-head">
       <div class="corner"></div>
-      <div class="day-head"><div class="dow">Mon</div><div class="date">9/28</div></div>
-      <div class="day-head"><div class="dow">Tue</div><div class="date">9/29</div></div>
-      <div class="day-head"><div class="dow">Wed</div><div class="date">9/30</div></div>
-      <div class="day-head empty"><div class="dow">Thu</div><div class="date">10/1</div></div>
-      <div class="day-head"><div class="dow">Fri</div><div class="date">10/2</div></div>
+      <div class="day-head"><div class="dow">Mon</div></div>
+      <div class="day-head"><div class="dow">Tue</div></div>
+      <div class="day-head"><div class="dow">Wed</div></div>
+      <div class="day-head empty"><div class="dow">Thu</div>
+      <div class="day-head"><div class="dow">Fri</div></div>
     </div>
 
     <div class="cal-body">
@@ -287,6 +293,11 @@
 
       <!-- TUESDAY -->
       <div class="day-col">
+        <div class="event phys" sty;e="top:90px; height:120px;">
+          <div class="top-row"><span class="code">PHYS 040</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">8:00 - 9:20am</div>
+          <div class="loc">Physics 2000</div>
+        </div>
         <div class="event cs" style="top:270px; height:165px;">
           <div class="top-row"><span class="code">CS 010A-022</span><span class="tag lab">Laboratory</span></div>
           <div class="time">10:00 – 11:50am</div>
@@ -320,6 +331,21 @@
 
       <!-- THURSDAY (empty) -->
       <div class="day-col"></div>
+        <div class="event phys" sty;e="top:90px; height:120px;">
+          <div class="top-row"><span class="code">PHYS 040</span><span class="tag lecture">Lecture</span></div>
+          <div class="time">8:00 - 9:20am</div>
+          <div class="loc">Physics 2000</div>
+        </div>
+        <div class="event phys" sty;e="top:270px; height:75px;">
+          <div class="top-row"><span class="code">PHYS 040</span><span class="tag discussion">Discussion</span></div>
+          <div class="time">10:00 - 10:50am</div>
+          <div class="loc">Winston Chung Hall 139</div>
+        </div>
+        <div class="event phys" sty;e="top:450px; height:255px;">
+          <div class="top-row"><span class="code">PHYS 040</span><span class="tag lab">Laboratory</span></div>
+          <div class="time">12:00 - 2:50pm</div>
+          <div class="loc">Physics 2000</div>
+        </div>
 
       <!-- FRIDAY -->
       <div class="day-col">
@@ -342,7 +368,7 @@
     </div>
   </div>
 
-  <footer>10 courses meetings · 5 unique sections</footer>
+  <footer>19 units</footer>
 </div>
 
 <script>
