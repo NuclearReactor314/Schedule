@@ -1,3 +1,13 @@
+If you'd like, I can generate the corrected HTML file and give you a downloadable file instead of pasting hundreds of lines into the chat.
+
+ok
+
+I've generated the corrected file:
+
+📄 Download the fixed HTML
+
+It includes the fixes for the broken Thursday column, style typos, legend typo, PHYS naming consistency, footer units, and HTML structure issues that were preventing the calendar from rendering correctly. 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -255,7 +265,7 @@
       <div class="legend-item"><span class="swatch writ"></span>WRIT 010</div>
       <div class="legend-item"><span class="swatch cs"></span>CS 010A</div>
       <div class="legend-item"><span class="swatch ee"></span>EE 010</div>
-      <div class="legend-item"><span class="swarch phys"></span>PHYS 040A</div>
+      <div class="legend-item"><span class="swatch phys"></span>PHYS 040A</div>
     </div>
   </header>
 
@@ -265,7 +275,7 @@
       <div class="day-head"><div class="dow">Mon</div></div>
       <div class="day-head"><div class="dow">Tue</div></div>
       <div class="day-head"><div class="dow">Wed</div></div>
-      <div class="day-head empty"><div class="dow">Thu</div>
+      <div class="day-head empty"><div class="dow">Thu</div></div>
       <div class="day-head"><div class="dow">Fri</div></div>
     </div>
 
@@ -293,8 +303,8 @@
 
       <!-- TUESDAY -->
       <div class="day-col">
-        <div class="event phys" sty;e="top:90px; height:120px;">
-          <div class="top-row"><span class="code">PHYS 040</span><span class="tag lecture">Lecture</span></div>
+        <div class="event phys" style="top:90px; height:120px;">
+          <div class="top-row"><span class="code">PHYS 040A</span><span class="tag lecture">Lecture</span></div>
           <div class="time">8:00 - 9:20am</div>
           <div class="loc">Physics 2000</div>
         </div>
@@ -329,23 +339,26 @@
         </div>
       </div>
 
-      <!-- THURSDAY (empty) -->
-      <div class="day-col"></div>
-        <div class="event phys" sty;e="top:90px; height:120px;">
-          <div class="top-row"><span class="code">PHYS 040</span><span class="tag lecture">Lecture</span></div>
+      <!-- THURSDAY -->
+      <div class="day-col">
+        <div class="event phys" style="top:90px; height:120px;">
+          <div class="top-row"><span class="code">PHYS 040A</span><span class="tag lecture">Lecture</span></div>
           <div class="time">8:00 - 9:20am</div>
           <div class="loc">Physics 2000</div>
         </div>
-        <div class="event phys" sty;e="top:270px; height:75px;">
-          <div class="top-row"><span class="code">PHYS 040</span><span class="tag discussion">Discussion</span></div>
+        <div class="event phys" style="top:270px; height:75px;">
+          <div class="top-row"><span class="code">PHYS 040A</span><span class="tag discussion">Discussion</span></div>
           <div class="time">10:00 - 10:50am</div>
           <div class="loc">Winston Chung Hall 139</div>
         </div>
-        <div class="event phys" sty;e="top:450px; height:255px;">
-          <div class="top-row"><span class="code">PHYS 040</span><span class="tag lab">Laboratory</span></div>
+        <div class="event phys" style="top:450px; height:255px;">
+          <div class="top-row"><span class="code">PHYS 040A</span><span class="tag lab">Laboratory</span></div>
           <div class="time">12:00 - 2:50pm</div>
           <div class="loc">Physics 2000</div>
         </div>
+
+      
+      </div>
 
       <!-- FRIDAY -->
       <div class="day-col">
@@ -368,7 +381,7 @@
     </div>
   </div>
 
-  <footer>19 units</footer>
+  <footer>17 units</footer>
 </div>
 
 <script>
