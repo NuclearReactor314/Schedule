@@ -61,11 +61,6 @@
   .macro-chip.fats .val{color:var(--cs);}
   .macro-chip.sleep .val{color:var(--sleep);}
 
-  .principles{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:40px;}
-  .principle{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px;}
-  .principle .num{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:.08em;}
-  .principle h3{font-family:'Space Grotesk',sans-serif; font-size:15px; margin:6px 0 6px; font-weight:600;}
-  .principle p{font-size:13px; color:var(--muted); line-height:1.5; margin:0;}
 
   .legend{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;}
   .legend-item{display:flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);}
@@ -163,6 +158,7 @@
 
   <p class="eyebrow">Fall Quarter 2026 — Mon – Sun</p>
   <h1>Training &amp; Course Schedule</h1>
+  <p class="sub">Built around your class times and a 6–7am wake-up — every meal, snack, shower, and walk between buildings has its own real block, sized to how long it actually takes.</p>
 
   <div class="macros">
     <div class="macro-chip protein"><div class="label">Protein</div><div class="val">110–125g</div></div>
@@ -206,55 +202,55 @@
       <div class="day-col">
         <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
         <div class="event run" style="top:15.0px;height:37.5px;"><span class="code">Run — Workout</span><span class="time">6:20am–7:10am</span></div>
-        <div class="event meal" style="top:52.5px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:52.5px;height:15.0px;"><span class="code">Shower</span></div>
         <div class="event walk" style="top:127.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event math" style="top:135.0px;height:37.5px;"><span class="code">MATH 020</span><span class="time">9am–9:50am</span></div>
         <div class="event walk" style="top:172.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event writ" style="top:180.0px;height:37.5px;"><span class="code">WRIT 006</span><span class="time">10am–10:50am</span></div>
         <div class="event walk" style="top:217.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event study" style="top:225.0px;height:45.0px;"><span class="code">Study</span><span class="time">11am–12pm</span></div>
-        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
-        <div class="event study" style="top:315.0px;height:37.5px;"><span class="code">Study</span><span class="time">1pm–1:50pm</span></div>
+        <div class="event meal" style="top:270.0px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:303.8px;height:48.8px;"><span class="code">Study</span><span class="time">12:45pm–1:50pm</span></div>
         <div class="event walk" style="top:352.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event cs" style="top:360.0px;height:60.0px;"><span class="code">CS 010A-001</span><span class="time">2pm–3:20pm</span></div>
         <div class="event walk" style="top:420.0px;height:14px;"><span class="code">Walk</span></div>
         <div class="event gym" style="top:431.2px;height:67.5px;"><span class="code">Push + Core</span><span class="time">3:35pm–5:05pm</span></div>
-        <div class="event meal" style="top:498.8px;height:14px;"><span class="code">Shake</span></div>
-        <div class="event walk" style="top:506.2px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event free" style="top:513.8px;height:26.2px;"><span class="code">Free</span><span class="time">5:25pm–6pm</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event study" style="top:585.0px;height:90.0px;"><span class="code">Study</span><span class="time">7pm–9pm</span></div>
-        <div class="event free" style="top:675.0px;height:33.8px;"><span class="code">Free</span><span class="time">9pm–9:45pm</span></div>
-        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
-        <div class="event free" style="top:723.8px;height:18.8px;"><span class="code">Wind down</span><span class="time">10:05pm–10:30pm</span></div>
+        <div class="event meal" style="top:498.8px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event walk" style="top:510.0px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event free" style="top:517.5px;height:22.5px;"><span class="code">Free</span><span class="time">5:30pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:573.8px;height:90.0px;"><span class="code">Study</span><span class="time">6:45pm–8:45pm</span></div>
+        <div class="event free" style="top:663.8px;height:33.8px;"><span class="code">Free</span><span class="time">8:45pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
         <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
       </div>
 
       <div class="day-col">
         <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
         <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
-        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Snack</span></div>
-        <div class="event study" style="top:56.2px;height:26.2px;"><span class="code">Study</span><span class="time">7:15am–7:50am</span></div>
+        <div class="event shower" style="top:45.0px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event study" style="top:60.0px;height:22.5px;"><span class="code">Study</span><span class="time">7:20am–7:50am</span></div>
         <div class="event walk" style="top:82.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event phys" style="top:90.0px;height:60.0px;"><span class="code">PHYS 040A-001</span><span class="time">8am–9:20am</span></div>
         <div class="event study" style="top:150.0px;height:22.5px;"><span class="code">Study</span><span class="time">9:20am–9:50am</span></div>
         <div class="event walk" style="top:172.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event cs" style="top:180.0px;height:82.5px;"><span class="code">CS Lab</span><span class="time">10am–11:50am</span></div>
         <div class="event walk" style="top:262.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
-        <div class="event study" style="top:315.0px;height:37.5px;"><span class="code">Study</span><span class="time">1pm–1:50pm</span></div>
+        <div class="event meal" style="top:270.0px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:303.8px;height:48.8px;"><span class="code">Study</span><span class="time">12:45pm–1:50pm</span></div>
         <div class="event walk" style="top:352.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event math" style="top:360.0px;height:37.5px;"><span class="code">MATH Disc.</span><span class="time">2pm–2:50pm</span></div>
         <div class="event walk" style="top:397.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event study" style="top:405.0px;height:30.0px;"><span class="code">Study</span><span class="time">3pm–3:40pm</span></div>
-        <div class="event free" style="top:435.0px;height:14px;"><span class="code">Free</span><span class="time">3:40pm–3:55pm</span></div>
-        <div class="event walk" style="top:446.2px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event gym" style="top:457.5px;height:67.5px;"><span class="code">Pull Strength</span><span class="time">4:10pm–5:40pm</span></div>
-        <div class="event meal" style="top:525.0px;height:14px;"><span class="code">Shake</span></div>
+        <div class="event free" style="top:435.0px;height:14px;"><span class="code">Free</span><span class="time">3:40pm–3:50pm</span></div>
+        <div class="event walk" style="top:442.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event gym" style="top:453.8px;height:67.5px;"><span class="code">Pull Strength</span><span class="time">4:05pm–5:35pm</span></div>
+        <div class="event meal" style="top:521.2px;height:14px;"><span class="code">Snack</span></div>
         <div class="event walk" style="top:532.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event study" style="top:585.0px;height:67.5px;"><span class="code">Study</span><span class="time">7pm–8:30pm</span></div>
-        <div class="event free" style="top:652.5px;height:45.0px;"><span class="code">Free</span><span class="time">8:30pm–9:30pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:573.8px;height:90.0px;"><span class="code">Study</span><span class="time">6:45pm–8:45pm</span></div>
+        <div class="event free" style="top:663.8px;height:33.8px;"><span class="code">Free</span><span class="time">8:45pm–9:30pm</span></div>
         <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
         <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
         <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
@@ -263,54 +259,25 @@
       <div class="day-col">
         <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
         <div class="event run" style="top:15.0px;height:37.5px;"><span class="code">Run — Workout</span><span class="time">6:20am–7:10am</span></div>
-        <div class="event meal" style="top:52.5px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:52.5px;height:15.0px;"><span class="code">Shower</span></div>
         <div class="event walk" style="top:127.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event math" style="top:135.0px;height:37.5px;"><span class="code">MATH 020</span><span class="time">9am–9:50am</span></div>
         <div class="event walk" style="top:172.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event writ" style="top:180.0px;height:37.5px;"><span class="code">WRIT 006</span><span class="time">10am–10:50am</span></div>
         <div class="event walk" style="top:217.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event study" style="top:225.0px;height:45.0px;"><span class="code">Study</span><span class="time">11am–12pm</span></div>
-        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
-        <div class="event study" style="top:315.0px;height:37.5px;"><span class="code">Study</span><span class="time">1pm–1:50pm</span></div>
+        <div class="event meal" style="top:270.0px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:303.8px;height:48.8px;"><span class="code">Study</span><span class="time">12:45pm–1:50pm</span></div>
         <div class="event walk" style="top:352.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event cs" style="top:360.0px;height:60.0px;"><span class="code">CS 010A-001</span><span class="time">2pm–3:20pm</span></div>
         <div class="event walk" style="top:420.0px;height:14px;"><span class="code">Walk</span></div>
         <div class="event gym" style="top:431.2px;height:67.5px;"><span class="code">Legs + Core</span><span class="time">3:35pm–5:05pm</span></div>
-        <div class="event meal" style="top:498.8px;height:14px;"><span class="code">Shake</span></div>
-        <div class="event walk" style="top:506.2px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event free" style="top:513.8px;height:26.2px;"><span class="code">Free</span><span class="time">5:25pm–6pm</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event study" style="top:585.0px;height:90.0px;"><span class="code">Study</span><span class="time">7pm–9pm</span></div>
-        <div class="event free" style="top:675.0px;height:33.8px;"><span class="code">Free</span><span class="time">9pm–9:45pm</span></div>
-        <div class="event shower" style="top:708.8px;height:15.0px;"><span class="code">Shower</span></div>
-        <div class="event free" style="top:723.8px;height:18.8px;"><span class="code">Wind down</span><span class="time">10:05pm–10:30pm</span></div>
-        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
-      </div>
-
-      <div class="day-col">
-        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
-        <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
-        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Snack</span></div>
-        <div class="event study" style="top:56.2px;height:26.2px;"><span class="code">Study</span><span class="time">7:15am–7:50am</span></div>
-        <div class="event walk" style="top:82.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event phys" style="top:90.0px;height:60.0px;"><span class="code">PHYS 040A-001</span><span class="time">8am–9:20am</span></div>
-        <div class="event study" style="top:150.0px;height:22.5px;"><span class="code">Study</span><span class="time">9:20am–9:50am</span></div>
-        <div class="event walk" style="top:172.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event phys" style="top:180.0px;height:37.5px;"><span class="code">PHYS Disc.</span><span class="time">10am–10:50am</span></div>
-        <div class="event walk" style="top:217.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event meal" style="top:225.0px;height:37.5px;"><span class="code">Lunch</span></div>
-        <div class="event walk" style="top:262.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event phys" style="top:270.0px;height:127.5px;"><span class="code">PHYS Lab</span><span class="time">12pm–2:50pm</span></div>
-        <div class="event walk" style="top:397.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event free" style="top:405.0px;height:22.5px;"><span class="code">Free</span><span class="time">3pm–3:30pm</span></div>
-        <div class="event walk" style="top:427.5px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event gym" style="top:438.8px;height:67.5px;"><span class="code">Upper Volume</span><span class="time">3:45pm–5:15pm</span></div>
-        <div class="event meal" style="top:506.2px;height:14px;"><span class="code">Shake</span></div>
-        <div class="event walk" style="top:513.8px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event free" style="top:521.2px;height:18.8px;"><span class="code">Free</span><span class="time">5:35pm–6pm</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event study" style="top:585.0px;height:67.5px;"><span class="code">Study</span><span class="time">7pm–8:30pm</span></div>
-        <div class="event free" style="top:652.5px;height:45.0px;"><span class="code">Free</span><span class="time">8:30pm–9:30pm</span></div>
+        <div class="event meal" style="top:498.8px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event walk" style="top:510.0px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event free" style="top:517.5px;height:22.5px;"><span class="code">Free</span><span class="time">5:30pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:573.8px;height:90.0px;"><span class="code">Study</span><span class="time">6:45pm–8:45pm</span></div>
+        <div class="event free" style="top:663.8px;height:33.8px;"><span class="code">Free</span><span class="time">8:45pm–9:30pm</span></div>
         <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
         <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
         <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
@@ -319,8 +286,37 @@
       <div class="day-col">
         <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
         <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
-        <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Snack</span></div>
-        <div class="event study" style="top:56.2px;height:71.2px;"><span class="code">Study</span><span class="time">7:15am–8:50am</span></div>
+        <div class="event shower" style="top:45.0px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event study" style="top:60.0px;height:22.5px;"><span class="code">Study</span><span class="time">7:20am–7:50am</span></div>
+        <div class="event walk" style="top:82.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event phys" style="top:90.0px;height:60.0px;"><span class="code">PHYS 040A-001</span><span class="time">8am–9:20am</span></div>
+        <div class="event study" style="top:150.0px;height:22.5px;"><span class="code">Study</span><span class="time">9:20am–9:50am</span></div>
+        <div class="event walk" style="top:172.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event phys" style="top:180.0px;height:37.5px;"><span class="code">PHYS Disc.</span><span class="time">10am–10:50am</span></div>
+        <div class="event walk" style="top:217.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event meal" style="top:225.0px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event walk" style="top:258.8px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event phys" style="top:270.0px;height:127.5px;"><span class="code">PHYS Lab</span><span class="time">12pm–2:50pm</span></div>
+        <div class="event walk" style="top:397.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event free" style="top:405.0px;height:22.5px;"><span class="code">Free</span><span class="time">3pm–3:30pm</span></div>
+        <div class="event walk" style="top:427.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event gym" style="top:438.8px;height:67.5px;"><span class="code">Upper Volume</span><span class="time">3:45pm–5:15pm</span></div>
+        <div class="event meal" style="top:506.2px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event walk" style="top:517.5px;height:14px;"><span class="code">Walk</span></div>
+        <div class="event free" style="top:525.0px;height:15.0px;"><span class="code">Free</span><span class="time">5:40pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:573.8px;height:67.5px;"><span class="code">Study</span><span class="time">6:45pm–8:15pm</span></div>
+        <div class="event free" style="top:641.2px;height:56.2px;"><span class="code">Free</span><span class="time">8:15pm–9:30pm</span></div>
+        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
+        <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
+      </div>
+
+      <div class="day-col">
+        <div class="event meal" style="top:0.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event run" style="top:15.0px;height:30.0px;"><span class="code">Run — Easy</span><span class="time">6:20am–7am</span></div>
+        <div class="event shower" style="top:45.0px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event study" style="top:60.0px;height:67.5px;"><span class="code">Study</span><span class="time">7:20am–8:50am</span></div>
         <div class="event walk" style="top:127.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event math" style="top:135.0px;height:37.5px;"><span class="code">MATH 020</span><span class="time">9am–9:50am</span></div>
         <div class="event walk" style="top:172.5px;height:14px;"><span class="code">Walk</span></div>
@@ -328,14 +324,14 @@
         <div class="event walk" style="top:217.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event gym" style="top:228.8px;height:67.5px;"><span class="code">Full Body + Core</span><span class="time">11:05am–12:35pm</span></div>
         <div class="event walk" style="top:296.2px;height:14px;"><span class="code">Walk</span></div>
-        <div class="event meal" style="top:303.8px;height:45.0px;"><span class="code">Lunch</span></div>
-        <div class="event study" style="top:348.8px;height:48.8px;"><span class="code">Study</span><span class="time">1:45pm–2:50pm</span></div>
+        <div class="event meal" style="top:303.8px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:337.5px;height:60.0px;"><span class="code">Study</span><span class="time">1:30pm–2:50pm</span></div>
         <div class="event walk" style="top:397.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event ee" style="top:405.0px;height:82.5px;"><span class="code">EE 010-001</span><span class="time">3pm–4:50pm</span></div>
         <div class="event walk" style="top:487.5px;height:14px;"><span class="code">Walk</span></div>
         <div class="event free" style="top:495.0px;height:45.0px;"><span class="code">Free</span><span class="time">5pm–6pm</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event free" style="top:585.0px;height:112.5px;"><span class="code">Free</span><span class="time">7pm–9:30pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event free" style="top:573.8px;height:123.8px;"><span class="code">Free</span><span class="time">6:45pm–9:30pm</span></div>
         <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
         <div class="event free" style="top:712.5px;height:30.0px;"><span class="code">Wind down</span><span class="time">9:50pm–10:30pm</span></div>
         <div class="event sleep" style="top:742.5px;height:14px;"><span class="code">Sleep</span></div>
@@ -344,34 +340,35 @@
       <div class="day-col">
         <div class="event meal" style="top:45.0px;height:14px;"><span class="code">Pre-run snack</span></div>
         <div class="event run" style="top:56.2px;height:78.8px;"><span class="code">Run — Long Run</span><span class="time">7:15am–9am</span></div>
-        <div class="event meal" style="top:135.0px;height:15.0px;"><span class="code">Snack</span></div>
-        <div class="event free" style="top:150.0px;height:52.5px;"><span class="code">Free</span><span class="time">9:20am–10:30am</span></div>
+        <div class="event meal" style="top:135.0px;height:14px;"><span class="code">Snack</span></div>
+        <div class="event shower" style="top:146.2px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:161.2px;height:41.2px;"><span class="code">Free</span><span class="time">9:35am–10:30am</span></div>
         <div class="event study" style="top:202.5px;height:67.5px;"><span class="code">Study</span><span class="time">10:30am–12pm</span></div>
-        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
-        <div class="event free" style="top:315.0px;height:101.2px;"><span class="code">Free</span><span class="time">1pm–3:15pm</span></div>
+        <div class="event meal" style="top:270.0px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event free" style="top:303.8px;height:112.5px;"><span class="code">Free</span><span class="time">12:45pm–3:15pm</span></div>
         <div class="event walk" style="top:416.2px;height:14px;"><span class="code">Walk</span></div>
         <div class="event gym" style="top:427.5px;height:22.5px;"><span class="code">Core</span><span class="time">3:30pm–4pm</span></div>
         <div class="event walk" style="top:450.0px;height:14px;"><span class="code">Walk</span></div>
         <div class="event free" style="top:457.5px;height:82.5px;"><span class="code">Free</span><span class="time">4:10pm–6pm</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event free" style="top:585.0px;height:112.5px;"><span class="code">Free</span><span class="time">7pm–9:30pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event free" style="top:573.8px;height:123.8px;"><span class="code">Free</span><span class="time">6:45pm–9:30pm</span></div>
         <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
         <div class="event free" style="top:712.5px;height:52.5px;"><span class="code">Wind down</span><span class="time">9:50pm–11pm</span></div>
         <div class="event sleep" style="top:765.0px;height:14px;"><span class="code">Sleep</span></div>
       </div>
 
       <div class="day-col">
-        <div class="event meal" style="top:90.0px;height:22.5px;"><span class="code">Breakfast</span></div>
-        <div class="event study" style="top:112.5px;height:135.0px;"><span class="code">Study</span><span class="time">8:30am–11:30am</span></div>
-        <div class="event free" style="top:247.5px;height:22.5px;"><span class="code">Free</span><span class="time">11:30am–12pm</span></div>
-        <div class="event meal" style="top:270.0px;height:45.0px;"><span class="code">Lunch</span></div>
-        <div class="event study" style="top:315.0px;height:90.0px;"><span class="code">Study</span><span class="time">1pm–3pm</span></div>
-        <div class="event free" style="top:405.0px;height:135.0px;"><span class="code">Free</span><span class="time">3pm–6pm</span></div>
-        <div class="event meal" style="top:540.0px;height:45.0px;"><span class="code">Dinner</span></div>
-        <div class="event study" style="top:585.0px;height:67.5px;"><span class="code">Study</span><span class="time">7pm–8:30pm</span></div>
-        <div class="event free" style="top:652.5px;height:45.0px;"><span class="code">Free</span><span class="time">8:30pm–9:30pm</span></div>
-        <div class="event shower" style="top:697.5px;height:15.0px;"><span class="code">Shower</span></div>
-        <div class="event free" style="top:712.5px;height:14px;"><span class="code">Wind down</span><span class="time">9:50pm–10pm</span></div>
+        <div class="event meal" style="top:90.0px;height:14px;"><span class="code">Breakfast</span></div>
+        <div class="event study" style="top:101.2px;height:135.0px;"><span class="code">Study</span><span class="time">8:15am–11:15am</span></div>
+        <div class="event free" style="top:236.2px;height:22.5px;"><span class="code">Free</span><span class="time">11:15am–11:45am</span></div>
+        <div class="event meal" style="top:258.8px;height:33.8px;"><span class="code">Lunch</span></div>
+        <div class="event study" style="top:292.5px;height:90.0px;"><span class="code">Study</span><span class="time">12:30pm–2:30pm</span></div>
+        <div class="event free" style="top:382.5px;height:157.5px;"><span class="code">Free</span><span class="time">2:30pm–6pm</span></div>
+        <div class="event meal" style="top:540.0px;height:33.8px;"><span class="code">Dinner</span></div>
+        <div class="event study" style="top:573.8px;height:67.5px;"><span class="code">Study</span><span class="time">6:45pm–8:15pm</span></div>
+        <div class="event free" style="top:641.2px;height:48.8px;"><span class="code">Free</span><span class="time">8:15pm–9:20pm</span></div>
+        <div class="event shower" style="top:690.0px;height:15.0px;"><span class="code">Shower</span></div>
+        <div class="event free" style="top:705.0px;height:15.0px;"><span class="code">Wind down</span><span class="time">9:40pm–10pm</span></div>
         <div class="event sleep" style="top:720.0px;height:14px;"><span class="code">Sleep</span></div>
       </div>
     </div>
@@ -386,34 +383,34 @@
   <details class="day">
     <summary>
       <div class="summary-left"><span class="day-name">Mon</span>
-        <div class="summary-chips"><span class="chip run">Workout Run</span><span class="chip gym">Push + Core</span><span class="chip study">3.8h study</span><span class="chip">3 classes</span></div>
+        <div class="summary-chips"><span class="chip run">Workout Run</span><span class="chip gym">Push + Core</span><span class="chip study">4.1h study</span><span class="chip">3 classes</span></div>
       </div>
       <span class="chevron">▸</span>
     </summary>
     <div class="day-content"><div class="agenda">
-      <div class="agenda-row"><div class="agenda-time">6:00</div><div class="agenda-main"><div class="title">Wake + light breakfast</div><div class="sets">Toast / banana — easy carbs, low fiber so the run isn't fighting digestion.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:15</div><div class="agenda-main"><div class="title">Breakfast</div><div class="sets">Toast / banana — easy carbs, low fiber so the run isn't fighting digestion.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">6:20–7:10</div><div class="agenda-main"><div class="title run">Run — Workout (Tempo/Intervals)</div><div class="why"><b>Why now:</b> quality speed work needs fresh legs and a fresh nervous system.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:10–7:25</div><div class="agenda-main"><div class="title">Recovery snack</div><div class="sets">~20–30g protein + fast carb, within 15 min of finishing.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:50–9:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div><div class="sets">10 min from dorm.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:10–7:30</div><div class="agenda-main"><div class="title shower">Shower</div><div class="sets">Right after the run, before the day starts.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:50–9:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div><div class="sets">10 min from dorm — eat your recovery snack on the way.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:00–9:50</div><div class="agenda-main"><div class="title math">MATH 009A-020 — Lecture</div><div class="sets">UG Teaching Learning Facility 103</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:00</div><div class="agenda-main"><div class="title walk">Walk to WRIT</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:00–10:50</div><div class="agenda-main"><div class="title writ">WRIT 010-006 — Lecture</div><div class="sets">UG Teaching Learning Facility 106</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:50–11:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
       <div class="agenda-row"><div class="agenda-time">11:00–12:00</div><div class="agenda-main"><div class="title study">Study — MATH / WRIT</div><div class="sets">Problem set review while the lecture is still fresh.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">12:00–1:00</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">1:00–1:50</div><div class="agenda-main"><div class="title study">Study — CS prep</div><div class="sets">Read ahead / review before the 2pm lecture.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:00–12:45</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:45–1:50</div><div class="agenda-main"><div class="title study">Study — CS prep</div><div class="sets">Read ahead / review before the 2pm lecture.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">1:50–2:00</div><div class="agenda-main"><div class="title walk">Walk to CS</div></div></div>
       <div class="agenda-row"><div class="agenda-time">2:00–3:20</div><div class="agenda-main"><div class="title cs">CS 010A-001 — Lecture</div><div class="sets">Winston Chung Hall 138</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:20–3:35</div><div class="agenda-main"><div class="title walk">Walk to gym</div><div class="sets">15 min — gym is further out than the classroom buildings.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:35–5:05</div><div class="agenda-main"><div class="title gym">Gym — Push Strength + Core</div><div class="sets">Bench Press 5×5 (4 min) · Overhead Press 4×6 (3 min) · Incline DB Press 4×8 (2 min) · Dips 3×8–10 (2 min) · Lateral Raises 4×12–15 (1 min) · Plank 3×1 min (45 sec)</div><div class="why"><b>Why now:</b> ~6 hours removed from the morning run, long enough that leg fatigue doesn't bleed into pressing strength.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:05–5:15</div><div class="agenda-main"><div class="title">Recovery shake</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:15–5:25</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:25–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div><div class="sets">Carb-forward to refill glycogen burned by the AM run and PM lift.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–9:00</div><div class="agenda-main"><div class="title study">Study — EE focus block</div><div class="sets">Longest weekday block; reserved for whichever EE problem set is due soonest.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:00–9:45</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Decompress — no screens-as-work.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:45–10:05</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">10:05–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:05–5:20</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:20–5:30</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:30–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div><div class="sets">Carb-forward to refill glycogen burned by the AM run and PM lift.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–8:45</div><div class="agenda-main"><div class="title study">Study — EE focus block</div><div class="sets">Longest weekday block; reserved for whichever EE problem set is due soonest.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:45–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:50–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:30</div><div class="agenda-main"><div class="title sleep">Sleep</div><div class="sets">~7.5 hrs before tomorrow's 6am wake.</div></div></div>
     </div></div>
   </details>
@@ -421,35 +418,35 @@
   <details class="day">
     <summary>
       <div class="summary-left"><span class="day-name">Tue</span>
-        <div class="summary-chips"><span class="chip run">Easy Run</span><span class="chip gym">Pull</span><span class="chip study">4.1h study</span><span class="chip">3 classes</span></div>
+        <div class="summary-chips"><span class="chip run">Easy Run</span><span class="chip gym">Pull</span><span class="chip study">4.75h study</span><span class="chip">3 classes</span></div>
       </div>
       <span class="chevron">▸</span>
     </summary>
     <div class="day-content"><div class="agenda">
-      <div class="agenda-row"><div class="agenda-time">6:00</div><div class="agenda-main"><div class="title">Wake + light breakfast</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:15</div><div class="agenda-main"><div class="title">Breakfast</div></div></div>
       <div class="agenda-row"><div class="agenda-time">6:20–7:00</div><div class="agenda-main"><div class="title run">Run — Easy</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–7:15</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:15–7:50</div><div class="agenda-main"><div class="title study">Study — quick PHYS prep</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:50–8:00</div><div class="agenda-main"><div class="title walk">Walk to PHYS</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:00–7:20</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:20–7:50</div><div class="agenda-main"><div class="title study">Study — quick PHYS prep</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:50–8:00</div><div class="agenda-main"><div class="title walk">Walk to PHYS</div><div class="sets">Eat your recovery snack on the way.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">8:00–9:20</div><div class="agenda-main"><div class="title phys">PHYS 040A-001 — Lecture</div><div class="sets">Physics 2000</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:20–9:50</div><div class="agenda-main"><div class="title study">Study — PHYS notes</div><div class="sets">Lock in the lecture while it's fresh.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:00</div><div class="agenda-main"><div class="title walk">Walk to CS Lab</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:00–11:50</div><div class="agenda-main"><div class="title cs">CS 010A-022 — Laboratory</div><div class="sets">UG Teaching Learning Facility 204</div></div></div>
       <div class="agenda-row"><div class="agenda-time">11:50–12:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">12:00–1:00</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">1:00–1:50</div><div class="agenda-main"><div class="title study">Study — lab writeup / CS</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:00–12:45</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:45–1:50</div><div class="agenda-main"><div class="title study">Study — lab writeup / CS</div></div></div>
       <div class="agenda-row"><div class="agenda-time">1:50–2:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div></div></div>
       <div class="agenda-row"><div class="agenda-time">2:00–2:50</div><div class="agenda-main"><div class="title math">MATH 009A-004 — Discussion</div><div class="sets">Sproul Hall 2339</div></div></div>
       <div class="agenda-row"><div class="agenda-time">2:50–3:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:00–3:40</div><div class="agenda-main"><div class="title study">Study — MATH problem set</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">3:40–3:55</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">3:55–4:10</div><div class="agenda-main"><div class="title walk">Walk to gym</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">4:10–5:40</div><div class="agenda-main"><div class="title gym">Gym — Pull Strength</div><div class="sets">Pull-ups 5 sets (3 min) · Barbell Rows 5×5 (3 min) · Lat Pulldowns 4×10 (1.5 min) · Seated Cable Rows 4×10 (1.5 min) · Face Pulls 4×15 (1 min) · DB Curls 4×12 (1 min) · Hanging Knee Raises 4×12 (45 sec)</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:40–5:50</div><div class="agenda-main"><div class="title">Recovery shake</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:40–3:50</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:50–4:05</div><div class="agenda-main"><div class="title walk">Walk to gym</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">4:05–5:35</div><div class="agenda-main"><div class="title gym">Gym — Pull Strength</div><div class="sets">Pull-ups 5 sets (3 min) · Barbell Rows 5×5 (3 min) · Lat Pulldowns 4×10 (1.5 min) · Seated Cable Rows 4×10 (1.5 min) · Face Pulls 4×15 (1 min) · DB Curls 4×12 (1 min) · Hanging Knee Raises 4×12 (45 sec)</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:35–5:50</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
       <div class="agenda-row"><div class="agenda-time">5:50–6:00</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–8:30</div><div class="agenda-main"><div class="title study">Study — lighter evening block</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:30–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–8:45</div><div class="agenda-main"><div class="title study">Study — lighter evening block</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:45–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:30</div><div class="agenda-main"><div class="title sleep">Sleep</div></div></div>
@@ -459,34 +456,34 @@
   <details class="day">
     <summary>
       <div class="summary-left"><span class="day-name">Wed</span>
-        <div class="summary-chips"><span class="chip run">Workout Run</span><span class="chip gym">Legs + Core</span><span class="chip study">3.8h study</span><span class="chip">3 classes</span></div>
+        <div class="summary-chips"><span class="chip run">Workout Run</span><span class="chip gym">Legs + Core</span><span class="chip study">4.1h study</span><span class="chip">3 classes</span></div>
       </div>
       <span class="chevron">▸</span>
     </summary>
     <div class="day-content"><div class="agenda">
-      <div class="agenda-row"><div class="agenda-time">6:00</div><div class="agenda-main"><div class="title">Wake + light breakfast</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:15</div><div class="agenda-main"><div class="title">Breakfast</div></div></div>
       <div class="agenda-row"><div class="agenda-time">6:20–7:10</div><div class="agenda-main"><div class="title run">Run — Workout (Tempo/Intervals)</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:10–7:25</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:50–9:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:10–7:30</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:50–9:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div><div class="sets">Eat your recovery snack on the way.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:00–9:50</div><div class="agenda-main"><div class="title math">MATH 009A-020 — Lecture</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:00</div><div class="agenda-main"><div class="title walk">Walk to WRIT</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:00–10:50</div><div class="agenda-main"><div class="title writ">WRIT 010-006 — Lecture</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:50–11:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
       <div class="agenda-row"><div class="agenda-time">11:00–12:00</div><div class="agenda-main"><div class="title study">Study — MATH / WRIT</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">12:00–1:00</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">1:00–1:50</div><div class="agenda-main"><div class="title study">Study — CS prep</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:00–12:45</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:45–1:50</div><div class="agenda-main"><div class="title study">Study — CS prep</div></div></div>
       <div class="agenda-row"><div class="agenda-time">1:50–2:00</div><div class="agenda-main"><div class="title walk">Walk to CS</div></div></div>
       <div class="agenda-row"><div class="agenda-time">2:00–3:20</div><div class="agenda-main"><div class="title cs">CS 010A-001 — Lecture</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:20–3:35</div><div class="agenda-main"><div class="title walk">Walk to gym</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:35–5:05</div><div class="agenda-main"><div class="title gym">Gym — Legs + Core</div><div class="sets">Back Squat 5×5 (4–5 min) · Romanian Deadlift 4×8 (3 min) · Bulgarian Split Squat 3×10 (2 min) · Walking Lunges 3×20 (2 min) · Calf Raises 5×15 (1 min) · Ab Wheel 3×10 (1 min)</div><div class="why"><b>Why now:</b> heaviest lower-body day of the week — same 6-hour buffer after the run keeps squat/deadlift performance from being capped by tired legs.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:05–5:15</div><div class="agenda-main"><div class="title">Recovery shake</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:15–5:25</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:25–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–9:00</div><div class="agenda-main"><div class="title study">Study — EE focus block</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:00–9:45</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:45–10:05</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">10:05–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:05–5:20</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:20–5:30</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:30–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–8:45</div><div class="agenda-main"><div class="title study">Study — EE focus block</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:45–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:50–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:30</div><div class="agenda-main"><div class="title sleep">Sleep</div></div></div>
     </div></div>
   </details>
@@ -494,34 +491,34 @@
   <details class="day">
     <summary>
       <div class="summary-left"><span class="day-name">Thu</span>
-        <div class="summary-chips"><span class="chip run">Easy Run</span><span class="chip gym">Upper Volume</span><span class="chip study">2.6h study</span><span class="chip">3 classes</span></div>
+        <div class="summary-chips"><span class="chip run">Easy Run</span><span class="chip gym">Upper Volume</span><span class="chip study">2.5h study</span><span class="chip">3 classes</span></div>
       </div>
       <span class="chevron">▸</span>
     </summary>
     <div class="day-content"><div class="agenda">
-      <div class="agenda-row"><div class="agenda-time">6:00</div><div class="agenda-main"><div class="title">Wake + light breakfast</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:15</div><div class="agenda-main"><div class="title">Breakfast</div></div></div>
       <div class="agenda-row"><div class="agenda-time">6:20–7:00</div><div class="agenda-main"><div class="title run">Run — Easy</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–7:15</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:15–7:50</div><div class="agenda-main"><div class="title study">Study — quick PHYS prep</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:50–8:00</div><div class="agenda-main"><div class="title walk">Walk to PHYS</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:00–7:20</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:20–7:50</div><div class="agenda-main"><div class="title study">Study — quick PHYS prep</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:50–8:00</div><div class="agenda-main"><div class="title walk">Walk to PHYS</div><div class="sets">Eat your recovery snack on the way.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">8:00–9:20</div><div class="agenda-main"><div class="title phys">PHYS 040A-001 — Lecture</div><div class="sets">Physics 2000</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:20–9:50</div><div class="agenda-main"><div class="title study">Study — PHYS review</div><div class="sets">Bridges lecture into discussion, back to back.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:00</div><div class="agenda-main"><div class="title walk">Walk to PHYS Discussion</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:00–10:50</div><div class="agenda-main"><div class="title phys">PHYS 040A — Discussion</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:50–11:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">11:00–11:50</div><div class="agenda-main"><div class="title">Lunch</div><div class="why"><b>Why now:</b> shifted an hour earlier than usual — the lab starts at noon sharp, so lunch has to happen ahead of it instead of after.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">11:50–12:00</div><div class="agenda-main"><div class="title walk">Walk to PHYS Lab</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">11:00–11:45</div><div class="agenda-main"><div class="title">Lunch</div><div class="why"><b>Why now:</b> shifted an hour earlier than usual — the lab starts at noon sharp, so lunch has to happen ahead of it instead of after.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">11:45–11:55</div><div class="agenda-main"><div class="title walk">Walk to PHYS Lab</div></div></div>
       <div class="agenda-row"><div class="agenda-time">12:00–2:50</div><div class="agenda-main"><div class="title phys">PHYS 040A-128 — Lab</div><div class="sets">Physics 2055</div></div></div>
       <div class="agenda-row"><div class="agenda-time">2:50–3:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:00–3:30</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Decompress — that's almost 7 hours of class/lab.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:30–3:45</div><div class="agenda-main"><div class="title walk">Walk to gym</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">3:45–5:15</div><div class="agenda-main"><div class="title gym">Gym — Upper Body Volume</div><div class="sets">DB Bench 4×10 (1.5 min) · Lat Pulldowns 4×10 (1.5 min) · Seated DB Press 4×10 (1.5 min) · Cable Row 4×10 (1.5 min) · Lateral Raises 4×15 (1 min) · Triceps Pushdown 4×12 (1 min) · Hammer Curl 4×12 (1 min)</div><div class="why"><b>Why now:</b> EE moved off Thursday, so this slot is back to a normal afternoon lift instead of pushing to night.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:15–5:25</div><div class="agenda-main"><div class="title">Recovery shake</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:25–5:35</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">5:35–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–8:30</div><div class="agenda-main"><div class="title study">Study — review / catch-up</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:30–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:45–5:15</div><div class="agenda-main"><div class="title gym">Gym — Upper Body Volume</div><div class="sets">DB Bench 4×10 (1.5 min) · Lat Pulldowns 4×10 (1.5 min) · Seated DB Press 4×10 (1.5 min) · Cable Row 4×10 (1.5 min) · Lateral Raises 4×15 (1 min) · Triceps Pushdown 4×12 (1 min) · Hammer Curl 4×12 (1 min)</div><div class="why"><b>Why now:</b> EE is off Thursday's schedule, so this slot is a normal afternoon lift.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:15–5:30</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:30–5:40</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">5:40–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–8:15</div><div class="agenda-main"><div class="title study">Study — review / catch-up</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:15–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:30</div><div class="agenda-main"><div class="title sleep">Sleep</div></div></div>
@@ -531,36 +528,35 @@
   <details class="day">
     <summary>
       <div class="summary-left"><span class="day-name">Fri</span>
-        <div class="summary-chips"><span class="chip run">Easy Run</span><span class="chip gym">Full Body + Core</span><span class="chip study">2.7h study</span><span class="chip">3 classes</span></div>
+        <div class="summary-chips"><span class="chip run">Easy Run</span><span class="chip gym">Full Body + Core</span><span class="chip study">2.8h study</span><span class="chip">3 classes</span></div>
       </div>
       <span class="chevron">▸</span>
     </summary>
     <div class="day-content"><div class="agenda">
-      <div class="agenda-row"><div class="agenda-time">6:00</div><div class="agenda-main"><div class="title">Wake + light breakfast</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:15</div><div class="agenda-main"><div class="title">Breakfast</div></div></div>
       <div class="agenda-row"><div class="agenda-time">6:20–7:00</div><div class="agenda-main"><div class="title run">Run — Easy</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–7:15</div><div class="agenda-main"><div class="title">Recovery snack</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:15–8:50</div><div class="agenda-main"><div class="title study">Study — before class</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:50–9:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:00–7:20</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">7:20–8:50</div><div class="agenda-main"><div class="title study">Study — before class</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:50–9:00</div><div class="agenda-main"><div class="title walk">Walk to MATH</div><div class="sets">Eat your recovery snack on the way.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:00–9:50</div><div class="agenda-main"><div class="title math">MATH 009A-020 — Lecture</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:00</div><div class="agenda-main"><div class="title walk">Walk to WRIT</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:00–10:50</div><div class="agenda-main"><div class="title writ">WRIT 010-006 — Lecture</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:50–11:05</div><div class="agenda-main"><div class="title walk">Walk to gym</div><div class="sets">15 min.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">11:05–12:35</div><div class="agenda-main"><div class="title gym">Gym — Full Body Strength + Core</div><div class="sets">Deadlift 5×3 (5 min) · Bench Press 4×6 (3 min) · Pull-ups 4 sets (3 min) · Front Squat 4×6 (3 min) · Farmer Carries 4×40 yd (2 min) · Hanging Leg Raises 4×12 (45 sec)</div><div class="why"><b>Why now:</b> EE 010 (3–4:50pm) blocks the usual post-class slot, so lifting happens late morning instead — well clear of the easy run, with no class conflict.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">12:35–12:45</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">12:45–1:45</div><div class="agenda-main"><div class="title">Lunch</div><div class="why"><b>Why now:</b> doubles as your post-workout meal — protein and carbs land right in the recovery window.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">1:45–2:50</div><div class="agenda-main"><div class="title study">Study — before EE lecture</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:45–1:30</div><div class="agenda-main"><div class="title">Lunch</div><div class="why"><b>Why now:</b> doubles as your post-workout meal — protein and carbs land right in the recovery window.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">1:30–2:50</div><div class="agenda-main"><div class="title study">Study — before EE lecture</div></div></div>
       <div class="agenda-row"><div class="agenda-time">2:50–3:00</div><div class="agenda-main"><div class="title walk">Walk to EE</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:00–4:50</div><div class="agenda-main"><div class="title ee">EE 010-001 — Lecture</div><div class="sets">UG Teaching Learning Facility 103</div></div></div>
       <div class="agenda-row"><div class="agenda-time">4:50–5:00</div><div class="agenda-main"><div class="title walk">Walk to dorm</div></div></div>
       <div class="agenda-row"><div class="agenda-time">5:00–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–9:30</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Lightest evening of the week on purpose — Friday night stays open.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–9:30</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Lightest evening of the week on purpose — Friday night stays open.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–10:30</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:30</div><div class="agenda-main"><div class="title sleep">Sleep</div></div></div>
     </div></div>
   </details>
-
 
   <details class="day">
     <summary>
@@ -573,17 +569,18 @@
       <div class="agenda-row"><div class="agenda-time">7:00</div><div class="agenda-main"><div class="title">Wake — sleep in an hour</div></div></div>
       <div class="agenda-row"><div class="agenda-time">7:00–7:15</div><div class="agenda-main"><div class="title">Pre-run snack</div><div class="sets">Carb-focused — toast with honey or a banana.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">7:15–9:00</div><div class="agenda-main"><div class="title run">Run — Long Run</div><div class="why"><b>Why now:</b> the week's most depleting session — placed first thing while fully rested, before the day's heat and plans build up.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:00–9:20</div><div class="agenda-main"><div class="title">Recovery snack</div><div class="sets">Bigger than weekday snacks to match the longer depletion.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:20–10:30</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Rest and recover before sitting down to work.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:00–9:15</div><div class="agenda-main"><div class="title">Recovery snack</div><div class="sets">No class to walk to today, so this stays a sit-down snack before showering.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:15–9:35</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:35–10:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
       <div class="agenda-row"><div class="agenda-time">10:30–12:00</div><div class="agenda-main"><div class="title study">Study — weekly catch-up</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">12:00–1:00</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">1:00–3:15</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:00–12:45</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:45–3:15</div><div class="agenda-main"><div class="title">Free time</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:15–3:30</div><div class="agenda-main"><div class="title walk">Walk to gym</div></div></div>
       <div class="agenda-row"><div class="agenda-time">3:30–4:00</div><div class="agenda-main"><div class="title gym">Core Session</div><div class="sets">Light, ~30 min — recovery work, not added fatigue.</div></div></div>
       <div class="agenda-row"><div class="agenda-time">4:00–4:10</div><div class="agenda-main"><div class="title walk">Walk back to dorm</div></div></div>
       <div class="agenda-row"><div class="agenda-time">4:10–6:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
       <div class="agenda-row"><div class="agenda-time">9:50–11:00</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
       <div class="agenda-row"><div class="agenda-time">11:00</div><div class="agenda-main"><div class="title sleep">Sleep</div></div></div>
@@ -599,22 +596,23 @@
     </summary>
     <div class="day-content"><div class="agenda">
       <div class="agenda-row"><div class="agenda-time">8:00</div><div class="agenda-main"><div class="title">Wake — sleep in</div><div class="sets">Full rest day: no run, no lifting. This is where the week's training actually gets absorbed.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:00–8:30</div><div class="agenda-main"><div class="title">Breakfast</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:30–11:30</div><div class="agenda-main"><div class="title study">Study — EE deep work</div><div class="why"><b>Why now:</b> your other fully open day — used for the week's biggest catch-up block while completely rested.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">11:30–12:00</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">12:00–1:00</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">1:00–3:00</div><div class="agenda-main"><div class="title study">Study — MATH / WRIT / CS</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">3:00–6:00</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Meal prep, laundry, errands, or just rest.</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">6:00–7:00</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">7:00–8:30</div><div class="agenda-main"><div class="title study">Study — plan the week ahead</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">8:30–9:30</div><div class="agenda-main"><div class="title">Free time</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:30–9:50</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">9:50–10:00</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
-      <div class="agenda-row"><div class="agenda-time">10:00</div><div class="agenda-main"><div class="title sleep">Sleep</div><div class="sets">Earlier than Fri/Sat — resets your sleep debt before Monday's hard run.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:00–8:15</div><div class="agenda-main"><div class="title">Breakfast</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:15–11:15</div><div class="agenda-main"><div class="title study">Study — EE deep work</div><div class="why"><b>Why now:</b> your fully open day — used for the week's biggest catch-up block while completely rested.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">11:15–11:45</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">11:45–12:30</div><div class="agenda-main"><div class="title">Lunch</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">12:30–2:30</div><div class="agenda-main"><div class="title study">Study — MATH / WRIT / CS</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">2:30–6:00</div><div class="agenda-main"><div class="title">Free time</div><div class="sets">Meal prep, laundry, errands, or just rest.</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00–6:45</div><div class="agenda-main"><div class="title">Dinner</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">6:45–8:15</div><div class="agenda-main"><div class="title study">Study — plan the week ahead</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">8:15–9:20</div><div class="agenda-main"><div class="title">Free time</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:20–9:40</div><div class="agenda-main"><div class="title shower">Shower</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">9:40–10:00</div><div class="agenda-main"><div class="title">Wind down</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">10:00</div><div class="agenda-main"><div class="title sleep">Sleep</div><div class="sets">Earlier than the rest of the week — resets your sleep debt before Monday's hard run.</div></div></div>
     </div></div>
   </details>
 
-  <footer>7-day cycle · ~25 hrs/week study, heaviest Sun/Tue/Mon/Wed · macro targets are daily, not per-session</footer>
+
+  <footer>7-day cycle · ~26 hrs/week study, heaviest Sun/Tue/Mon/Wed · macro targets are daily, not per-session</footer>
 </div>
 
 <script>
